@@ -67,6 +67,7 @@ class JobQueueWorker(object):
       now = datetime.datetime.now()
 
       if (now - last_run).seconds > self.housekeeping_interval_sec:
+        last_run = datetime.datetime.now()
         for k, v in self.jobs.items():
           if now > v.expires:
             a.append(k)
