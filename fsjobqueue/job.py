@@ -74,6 +74,7 @@ class Job(object):
     return Job(
       queue_path, 
       name=j['name'], 
+      data=j['data'], 
       filename=j['filename'], 
       expires=dateutil.parser.parse(j['expires']), 
       status=Job.Status(int(j['status'])),
