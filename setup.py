@@ -13,6 +13,10 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/anttin/fsjobqueue",
     packages=setuptools.find_packages(),
+    install_requires=[
+      'python-dateutil',
+      'watchdog'
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
